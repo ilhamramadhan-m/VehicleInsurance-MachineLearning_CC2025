@@ -1,47 +1,58 @@
-# 🚗 Vehicle Insurance Customer Segmentation & Claim Prediction using Machine Learning
+# 🚗 Segmentasi Pelanggan & Prediksi Klaim Asuransi Kendaraan Menggunakan Machine Learning
 
-## 📌 Project Overview
-This project utilizes the **Vehicle Insurance Customer Data** from Kaggle to extract insights using both **clustering (unsupervised learning)** and **classification (supervised learning)**. The objective is twofold:
-- Identify distinct customer segments based on demographic and behavioral attributes.
-- Predict whether a customer will claim vehicle insurance based on their profile.
+## 📌 Gambaran Umum Proyek
 
-This analysis is performed as part of the final submission for the **Belajar Machine Learning Pemula (BMLP)** program.
+Proyek ini menggunakan **Data Pelanggan Asuransi Kendaraan** dari Kaggle untuk menggali wawasan melalui dua pendekatan:
+
+* **Clustering (unsupervised learning)** untuk mengidentifikasi segmen pelanggan.
+* **Klasifikasi (supervised learning)** untuk memprediksi kemungkinan pelanggan melakukan klaim asuransi.
+
+Analisis ini dilakukan sebagai bagian dari submission akhir untuk program **Belajar Machine Learning Pemula (BMLP)**.
 
 ## 📂 Dataset
+
 [Vehicle Insurance Customer Data — Kaggle](https://www.kaggle.com/datasets/ranja7/vehicle-insurance-customer-data/data)
 
-The dataset contains features such as:
-- **Demographics**: Age, Gender, Region, Driving License
-- **Vehicle Info**: Previously insured, vehicle age, damage history
-- **Policy Info**: Annual premium, policy sales channel
-- **Target Variable**: `Response` — indicates if the customer showed interest in vehicle insurance
+Dataset ini berisi informasi seperti:
 
-## 🧠 Analysis Breakdown
+* **Demografis**: Usia, Jenis Kelamin, Wilayah, SIM
+* **Info Kendaraan**: Status asuransi sebelumnya, usia kendaraan, riwayat kerusakan
+* **Info Polis**: Premi tahunan, saluran penjualan polis
+* **Variabel Target**: `Response` — menunjukkan apakah pelanggan tertarik dengan penawaran asuransi
 
-### Clustering Analysis
+## 🧠 Rangkuman Analisis
+
+### Analisis Clustering
+
 Notebook: `Vehicle Insurance Clustering Analysis.ipynb`
 
-- **Objective**: Segment customers into groups for targeted marketing
-- **Techniques**:
-  - Feature scaling with MinMaxScaler
-  - Dimensionality reduction using PCA
-  - Clustering using **KMeans**
-- **Model Evaluation**:
-  - Optimal cluster number chosen via **Elbow Method** and **Silhouette Score**
-  - Cluster visualization using 2D PCA projection
+* **Tujuan**: Mengelompokkan pelanggan ke dalam beberapa segmen untuk strategi pemasaran yang lebih tepat sasaran.
+* **Teknik yang Digunakan**:
 
-### Classification Analysis
+  * *Feature scaling* menggunakan **MinMaxScaler**
+  * Reduksi dimensi menggunakan **PCA**
+  * Clustering dengan algoritma **KMeans**
+* **Evaluasi Model**:
+
+  * Penentuan jumlah cluster optimal menggunakan **Metode Elbow** dan **Silhouette Score**
+  * Visualisasi cluster dengan proyeksi 2D hasil dari PCA
+
+### Analisis Klasifikasi
+
 Notebook: `Vehicle Insurance Classification Analysis.ipynb`
 
-- **Objective**: Predict if a customer is likely to respond positively to an insurance offer
-- **Preprocessing**:
-  - Encoding categorical features
-  - Feature-target split and train/test split
-- **Models Used**:
-  - Logistic Regression
-  - Decision Tree
-  - K-Nearest Neighbors (KNN)
-- **Metrics Evaluated**:
-  - Accuracy
-  - F1-Score
-  - Confusion Matrix
+* **Tujuan**: Memprediksi apakah seorang pelanggan akan merespons positif terhadap penawaran asuransi kendaraan.
+* **Pra-pemrosesan**:
+
+  * Encoding fitur kategorikal
+  * Pemisahan fitur dan target, serta pembagian data train/test
+* **Model yang Digunakan**:
+
+  * Logistic Regression
+  * Decision Tree
+  * K-Nearest Neighbors (KNN)
+* **Metrik Evaluasi**:
+
+  * Akurasi
+  * F1-Score
+  * Confusion Matrix
